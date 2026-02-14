@@ -11,6 +11,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/reveal-js/dist/reset.css">
 <link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/reveal-hugo/themes/artheus.css" id="theme"><link rel="stylesheet" href="/highlight-js/color-brewer.min.css"><link rel="stylesheet" href="/css/custom.css" id="custom_css">
 
+
+<meta property="og:title" content="Valentine For You 💖">
+<meta property="og:description" content="Something special...">
+<meta property="og:image" content="https://aertheus.my.id/icon.jpeg">
+<meta property="og:url" content="https://artheus.my.id/">
+<meta property="og:type" content="website for u baby <3">
 <style>
  
 .reveal section pre {
@@ -63,7 +69,7 @@ class="gif"></p>
 Happy Valentine's
 </h1>
 <p class="face">(o◕‿◕o)</p>
-<button class="btn" onclick="startMusic(); Reveal.next();">
+<button class="btn" onclick="Reveal.next('memories');">
 Lanjut!! ^w^
 </button>
 <audio id="bg-music" loop>
@@ -86,26 +92,71 @@ Lanjut!! ^w^
   <img src="/images/gambar-4.jpeg">
 </div>
 </section>
-    
-<section data-noprocess data-shortcode-slide
-      id="song">
-  
-
-<section data-noprocess data-shortcode-slide
-      data-background-image="/images/bg.jpg">
-  
-<section class="wrapper">
+    <section><section class="wrapper">
 <div class="card">
 <h5>
 Inilah lagu yang selalu mengingatkanku padamu...
 </h5>
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/75JFxkI2RXiU7L9VXzMkle?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<p class="face">(o◕‿◕o)</p>
-<button class="btn" onclick="Reveal.back()">
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0aVd7QiY8BstysHb62c5Fi?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<p class="face">＞︿＜</p>
+<button class="btn" onclick='Reveal.prev()'>
 Kembali!! ^0^
 </button>
-<button class="btn" onclick="Reveal.next()">
+<button class="btn" onclick="Reveal.next(3)">
 Lanjut!! ^w^
+</button>
+</div>
+</section>
+</section>
+    
+<section data-noprocess data-shortcode-slide
+      data-background-image="/images/bg.jpg">
+  
+<section class="val-wrapper">
+<div class="card">
+<h3 class="title">
+Apakah kamu akan membuka pesan? ˶ᵔ ᵕ ᵔ˶
+</h3>
+<p>Senyum yang selalu bikin hari aku lebih hangat</p>
+<img src="/images/envelope.gif" class="val-gif">
+<div class="val-btn-group">
+  <button class="val-btn" onclick="goYes()">Iyaa</button>
+  <button class="val-btn no" onclick="goNo()">Gak, Makasih</button>
+</div>
+</div>
+</section>
+</section>
+    <section><section class="val-wrapper">
+<div class="memory-grid">
+<img src="/images/gambar-7.jpeg">
+<img src="/images/gambar-6.jpeg">
+</div>
+<div class="card">
+<h2 class="val-title">
+Happy Valentine's sayanggg💕
+</h2>
+<p>
+Maaffff sayanggg kalau aku cumaa ngasih ini ya,sayangg akuuu gemess nyaa akuu,cantikknyaa akuuu,perempuannku yangg paling cantikk sealamm semestaa✨makasihhh udahh selalu sama akuu,udah sabar sama aku,aku harapp aku bisaa selaluu sama kamu selamanya lovee uuu sayangg 
+<p>Maaf kalau akuu selalu bikin marah kamu,bikin bete,nangis, ngambek maafinn akuu yaa selama inii semogaa di maapinn yaa🥺
+Diantara riuh kehidupan,aku menemukan keindahanmu
+Terimakasi,semesta,atas hadiah yang lebih indah dari rupa-rupa warna di dunia</p>
+<p>Dalam degup paling riuh izinkan aku mengagumimu lebih lama. Pada dirimu,bentuk paling sempurna,pada tuturmu,pemilik kata paling purnama
+Akuu gatau lagii mauu bilangg apaa cumann mauu bilangg aku sayanggg banget ama kamuu</p>
+</p>
+<button class="val-btn" onclick="Reveal.next(3)">
+Mulai lagi?
+</button>
+</div>
+</section>
+</section>
+    <section><section class="val-wrapper">
+<div class="card">
+<img src="https://public.youware.com/users-website-assets/prod/988fb73f-2ddd-4e52-9944-af0fd313880c/f0e936a649dd4e3bb800df08e0001932.png" class="val-gif">
+<h3 class="val-title">
+Ahh gmw gitu? >_<
+</h3>
+<button class="val-btn" onclick="Reveal.slide(0,0)">
+Ulangi..?
 </button>
 </div>
 </section>
@@ -151,7 +202,7 @@ Lanjut!! ^w^
 
   var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
   var revealHugoSiteParams = {"controls":true,"custom_css":"css/custom.css","custom_js":"js/confetti.js","highlight_theme":"monokai","history":true,"slide_number":false,"templates":{"grey":{"background":"#161a22","transition":"convex"}},"theme":"black","transition":"fade"};
-  var revealHugoPageParams = {"custom_theme":"reveal-hugo/themes/artheus.css","highlight_theme":"color-brewer","templates":{"hotpink":{"class":"hotpink"}},"transition":"convex","transition_speed":"fast"};
+  var revealHugoPageParams = {"custom_theme":"reveal-hugo/themes/artheus.css","highlight_theme":"color-brewer","templates":{"hotpink":{"class":"hotpink","weight":1}},"transition":"convex","transition_speed":"fast"};
 
   var revealHugoPlugins = {
     
@@ -171,6 +222,9 @@ Lanjut!! ^w^
 
 
 
+
+  
+  
 
   
   
@@ -231,6 +285,9 @@ Reveal.on('ready', event => {
   }
 });
 </script>
+
+
+<script src="/js/custom.js"></script>
 
 <audio id="bg-music" loop>
   <source src="/musik/Wave To Earth -  Seasons - jemmaa.mp3" type="audio/mpeg">

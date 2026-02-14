@@ -362,6 +362,13 @@ body {
   margin-left: 25px;
   margin-top: 30px;
 }
+.memory-grid-about {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  gap: 15px;
+  margin-left: 25px;
+  margin-top: 30px;
+}
 
 .memory-grid img {
   width: 100%;
@@ -371,6 +378,16 @@ body {
   transition: 0.4s ease;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
+.memory-grid-about img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
 
 .memory-grid img:hover {
   transform: scale(1.05);

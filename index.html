@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/reveal-js/dist/reset.css">
-<link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/highlight-js/color-brewer.min.css"><link rel="stylesheet" href="/css/custom.css" id="custom_css">
+<link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/reveal-hugo/themes/artheus.css" id="theme"><link rel="stylesheet" href="/highlight-js/color-brewer.min.css"><link rel="stylesheet" href="/css/custom.css" id="custom_css">
 
 <style>
  
@@ -56,9 +56,20 @@
       <div class="slides">
   
 
-    <section><p><img src="https://mayz.love/assets/modern-love/nyqnxeb6y4.gif" alt="alt text"></p>
-<h1 id="happy-valentines-days">Happy Valentine&rsquo;s Days</h1>
-<p>(o◕‿◕o)</p>
+    <section><div class="card">
+<p><img src="https://mayz.love/assets/modern-love/nyqnxeb6y4.gif"
+class="gif"></p>
+<h1 class="title">
+Happy Valentine's
+</h1>
+<p class="face">(o◕‿◕o)</p>
+<button class="btn" onclick="startMusic(); Reveal.next()">
+Lanjut!! ^w^
+</button>
+<audio id="bg-music" loop>
+  <source src="/musik/Wave To Earth -  Seasons - jemmaa.mp3" type="audio/mpeg">
+</audio>
+</div>
 </section>
 
   
@@ -67,34 +78,13 @@
 <section data-noprocess data-shortcode-slide
       id="memories">
   
-<h2 id="memories-">Memories 🌸</h2>
+<h2 id="our-beautiful-memories-">Our Beautiful Memories 🌸</h2>
 <div class="memory-grid">
-  <img src="https://raw.githubusercontent.com/noordstar/elm-palette/main/img/macchiato/Base.png">
-  <img src="https://raw.githubusercontent.com/noordstar/elm-palette/main/img/macchiato/Base.png">
-  <img src="https://raw.githubusercontent.com/noordstar/elm-palette/main/img/macchiato/Base.png">
-  <img src="https://raw.githubusercontent.com/noordstar/elm-palette/main/img/macchiato/Base.png">
+  <img src="/images/gambar-1.jpeg">
+  <img src="/images/gambar-2.jpeg">
+  <img src="/images/gambar-3.jpeg">
+  <img src="/images/gambar-4.jpeg">
 </div>
-<style>
-.memory-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.memory-grid img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 20px;
-  transition: 0.4s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-.memory-grid img:hover {
-  transform: scale(1.05);
-}
-</style>
 </section>
     
 <section data-noprocess data-shortcode-slide
@@ -102,12 +92,23 @@
   
 
 <section data-noprocess data-shortcode-slide
-      data-background-color="#000000"
       data-background-image="/images/bg.jpg">
   
-<h2 id="heading">🎵</h2>
-<p>Inilah lagu yang selalu mengingatkanku padamu&hellip;</p>
+<section class="wrapper">
+<div class="card">
+<h5>
+Inilah lagu yang selalu mengingatkanku padamu...
+</h5>
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/75JFxkI2RXiU7L9VXzMkle?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<p class="face">(o◕‿◕o)</p>
+<button class="btn" onclick="Reveal.back()">
+Kembali!! ^0^
+</button>
+<button class="btn" onclick="Reveal.next()">
+Lanjut!! ^w^
+</button>
+</div>
+</section>
 </section>
 
 </div>
@@ -149,8 +150,8 @@
   }
 
   var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
-  var revealHugoSiteParams = {"controls":true,"custom_css":"css/custom.css","custom_js":"js/confetti.js","highlight_theme":"monokai","history":true,"navigation_mode":"default","slide_number":false,"templates":{"grey":{"background":"#161a22","transition":"convex"}},"theme":"black","transition":"fade"};
-  var revealHugoPageParams = {"custom_theme":"reveal-hugo/themes/robot-lung.css","highlight_theme":"color-brewer","templates":{"hotpink":{"class":"hotpink"}},"transition":"convex","transition_speed":"fast"};
+  var revealHugoSiteParams = {"controls":true,"custom_css":"css/custom.css","custom_js":"js/confetti.js","highlight_theme":"monokai","history":true,"slide_number":false,"templates":{"grey":{"background":"#161a22","transition":"convex"}},"theme":"black","transition":"fade"};
+  var revealHugoPageParams = {"custom_theme":"reveal-hugo/themes/artheus.css","highlight_theme":"color-brewer","templates":{"hotpink":{"class":"hotpink"}},"transition":"convex","transition_speed":"fast"};
 
   var revealHugoPlugins = {
     
@@ -189,6 +190,12 @@
   
   
 
+  
+  
+
+  
+  
+
 
 
 
@@ -202,7 +209,32 @@
 Reveal.on('slidechanged', function(event) {
   console.log("🎞️ Slide is now " + event.indexh);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  const music = document.getElementById("bg-music");
+
+  Reveal.on('slidechanged', event => {
+    const currentSlide = event.indexh;
+
+    if (currentSlide === 0 || currentSlide === 1) {
+      music.play().catch(() => {});
+    }
+  });
+
+});
+
+Reveal.on('ready', event => {
+  const music = document.getElementById("bg-music");
+  if (event.indexh === 0) {
+    music.play().catch(() => {});
+  }
+});
 </script>
+
+<audio id="bg-music" loop>
+  <source src="/musik/Wave To Earth -  Seasons - jemmaa.mp3" type="audio/mpeg">
+</audio>
 
   </body>
 </html>

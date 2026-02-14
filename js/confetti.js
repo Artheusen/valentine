@@ -42,7 +42,7 @@
 });
 
 function goYes() {
-  Reveal.slide(4); // slide yes
+  Reveal.next(4); // slide yes
 }
 
 function goNo() {

@@ -21,9 +21,9 @@
   }
 
   // 🎉 Saat pertama load
-  window.addEventListener("load", function () {
-    setTimeout(fireConfetti, 800);
-  });
+  // window.addEventListener("load", function () {
+  //   setTimeout(fireConfetti, 800);
+  // });
 
   // 🎉 Saat balik ke tab
   document.addEventListener("visibilitychange", function () {
@@ -40,3 +40,11 @@
   }
 
 });
+
+function goYes() {
+  Reveal.slide(4); // slide yes
+}
+
+function goNo() {
+  Reveal.slide(5); // slide no
+}
